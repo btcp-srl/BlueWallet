@@ -14,6 +14,7 @@
     "no": "No",
     "save": "Save",
     "seed": "Seed",
+    "success": "Success",
     "wallet_key": "Wallet key",
     "invalid_animated_qr_code_fragment" : "Invalid animated QRCode fragment. Please try again.",
     "file_saved": "File ({filePath}) has been saved in your Downloads folder.",
@@ -174,7 +175,6 @@
     "details_address_field_is_not_valid": "The address is not valid.",
     "details_adv_fee_bump": "Allow Fee Bump",
     "details_adv_full": "Use Full Balance",
-    "details_adv_full_remove": "Your other recipients will be removed from this transaction.",
     "details_adv_full_sure": "Are you sure you want to use your wallet’s full balance for this transaction?",
     "details_adv_import": "Import Transaction",
     "details_amount_field_is_not_valid": "The amount is not valid.",
@@ -183,15 +183,12 @@
     "details_error_decode": "Unable to decode Bitcoin address",
     "details_fee_field_is_not_valid": "The fee is not valid.",
     "details_next": "Next",
-    "details_no_maximum": "The selected wallet doesn’t support automatic maximum balance calculation. Are you sure to want to select this wallet?",
-    "details_no_multiple": "The selected wallet doesn’t support sending bitcoin to multiple recipients. Are you sure to want to select this wallet?",
     "details_no_signed_tx": "The selected file doesn’t contain a transaction that can be imported.",
     "details_note_placeholder": "Note to Self",
     "details_scan": "Scan",
     "details_total_exceeds_balance": "The sending amount exceeds the available balance.",
     "details_unrecognized_file_format": "Unrecognized file format",
     "details_wallet_before_tx": "Before creating a transaction, you must first add a Bitcoin wallet.",
-    "details_wallet_selection": "Wallet Selection",
     "dynamic_init": "Initializing",
     "dynamic_next": "Next",
     "dynamic_prev": "Previous",
@@ -568,5 +565,16 @@
     "MAX": "Max",
     "sat_byte": "sat/byte",
     "sats": "sats"
+  },
+  "addresses": {
+    "sign_title": "Sign/Verify message",
+    "sign_help": "Here you can create or verify a cryptographic signature based on a Bitcoin address",
+    "sign_sign": "Sign",
+    "sign_verify": "Verify",
+    "sign_signature_correct": "Verification Succeeded!",
+    "sign_signature_incorrect": "Verification Failed!",
+    "sign_placeholder_address": "Address",
+    "sign_placeholder_message": "Message",
+    "sign_placeholder_signature": "Signature"
   }
 }

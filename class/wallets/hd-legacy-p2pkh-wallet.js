@@ -12,12 +12,9 @@ const BlueElectrum = require('../../blue_modules/BlueElectrum');
 export class HDLegacyP2PKHWallet extends AbstractHDElectrumWallet {
   static type = 'HDlegacyP2PKH';
   static typeReadable = 'HD Legacy (BIP44 P2PKH)';
+  static derivationPath = "m/44'/0'/0'";
 
   allowSend() {
-    return true;
-  }
-
-  allowSendMax() {
     return true;
   }
 
@@ -26,6 +23,10 @@ export class HDLegacyP2PKHWallet extends AbstractHDElectrumWallet {
   }
 
   allowSignVerifyMessage() {
+    return true;
+  }
+
+  allowMasterFingerprint() {
     return true;
   }
 

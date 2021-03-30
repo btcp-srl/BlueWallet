@@ -476,10 +476,6 @@ export class LegacyWallet extends AbstractWallet {
     return false;
   }
 
-  allowSendMax() {
-    return true;
-  }
-
   allowSignVerifyMessage() {
     return true;
   }
@@ -533,5 +529,15 @@ export class LegacyWallet extends AbstractWallet {
   verifyMessage(message, address, signature) {
     // null, true so it can verify Electrum signatores without errors
     return bitcoinMessage.verify(message, address, signature, null, true);
+  }
+
+  /**
+   * Probes address for transactions, if there are any returns TRUE
+   *
+   * @returns {Promise<boolean>}
+   */
+  async wasEverUsed() {
+    const txs = await BlueElectrum.getTransactionsByAddress(this.getAddress());
+    return txs.length > 0;
   }
 }

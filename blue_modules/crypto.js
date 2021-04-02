@@ -3,6 +3,8 @@
  * This module mimics the node crypto api and is intended to work in RN environment.
  */
 
+const pbkdf2 = require('pbkdf2');
+const createHmac = require('create-hmac');
 const { NativeModules } = require('react-native');
 const { RNRandomBytes } = NativeModules;
 
@@ -21,3 +23,7 @@ exports.randomBytes = (size, callback) => {
     }
   });
 };
+
+// for slip39
+exports.pbkdf2Sync = pbkdf2.pbkdf2Sync;
+exports.createHmac = createHmac;

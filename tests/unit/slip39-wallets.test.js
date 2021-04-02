@@ -5,6 +5,19 @@ import { SLIP39LegacyP2PKHWallet, SLIP39SegwitP2SHWallet, SLIP39SegwitBech32Wall
 global.crypto = require('crypto');
 
 describe('SLIP39 wallets tests', () => {
+  it('can validateMnemonic', async () => {
+    const w = new SLIP39LegacyP2PKHWallet();
+    // not enought shares
+    w.setSecret(
+      'shadow pistol academic always adequate wildlife fancy gross oasis cylinder mustang wrist rescue view short owner flip making coding armed',
+    );
+    assert.strictEqual(w.validateMnemonic(), false);
+
+    // wrong words
+    w.setSecret('qweasd ewqasd');
+    assert.strictEqual(w.validateMnemonic(), false);
+  });
+
   it('SLIP39LegacyP2PKHWallet can generate addresses', async () => {
     const w = new SLIP39LegacyP2PKHWallet();
     // 4. Basic sharing 2-of-3 (128 bits)

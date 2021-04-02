@@ -1,4 +1,3 @@
-import bip39 from 'bip39';
 import { AbstractHDElectrumWallet } from './abstract-hd-electrum-wallet';
 const bitcoin = require('bitcoinjs-lib');
 const HDNode = require('bip32');

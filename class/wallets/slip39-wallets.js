@@ -13,7 +13,14 @@ const SLIP39Mixin = {
   },
 
   validateMnemonic() {
-    return this.secret.every(m => slip39.validateMnemonic(m));
+    if (!this.secret.every(m => slip39.validateMnemonic(m))) return false;
+
+    try {
+      slip39.recoverSecret(this.secret);
+    } catch (e) {
+      return false;
+    }
+    return true;
   },
 
   setSecret(newSecret) {

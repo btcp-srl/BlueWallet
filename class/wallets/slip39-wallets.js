@@ -1,4 +1,5 @@
 import slip39 from 'slip39';
+import createHash from 'create-hash';
 
 import { HDLegacyP2PKHWallet } from './hd-legacy-p2pkh-wallet';
 import { HDSegwitP2SHWallet } from './hd-segwit-p2sh-wallet';
@@ -36,6 +37,11 @@ const SLIP39Mixin = {
       );
     return this;
   },
+
+  getID() {
+    const string2hash = this.secret.sort().join(',');
+    return createHash('sha256').update(string2hash).digest().toString('hex');
+  },
 };
 
 export class SLIP39LegacyP2PKHWallet extends HDLegacyP2PKHWallet {
@@ -45,6 +51,7 @@ export class SLIP39LegacyP2PKHWallet extends HDLegacyP2PKHWallet {
   _getSeed = SLIP39Mixin._getSeed;
   validateMnemonic = SLIP39Mixin.validateMnemonic;
   setSecret = SLIP39Mixin.setSecret;
+  getID = SLIP39Mixin.getID;
 }
 
 export class SLIP39SegwitP2SHWallet extends HDSegwitP2SHWallet {
@@ -54,6 +61,7 @@ export class SLIP39SegwitP2SHWallet extends HDSegwitP2SHWallet {
   _getSeed = SLIP39Mixin._getSeed;
   validateMnemonic = SLIP39Mixin.validateMnemonic;
   setSecret = SLIP39Mixin.setSecret;
+  getID = SLIP39Mixin.getID;
 }
 
 export class SLIP39SegwitBech32Wallet extends HDSegwitBech32Wallet {
@@ -63,4 +71,5 @@ export class SLIP39SegwitBech32Wallet extends HDSegwitBech32Wallet {
   _getSeed = SLIP39Mixin._getSeed;
   validateMnemonic = SLIP39Mixin.validateMnemonic;
   setSecret = SLIP39Mixin.setSecret;
+  getID = SLIP39Mixin.getID;
 }

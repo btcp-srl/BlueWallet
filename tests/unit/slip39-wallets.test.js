@@ -18,6 +18,16 @@ describe('SLIP39 wallets tests', () => {
     assert.strictEqual(w.validateMnemonic(), false);
   });
 
+  it('can generate ID', () => {
+    const w = new SLIP39LegacyP2PKHWallet();
+    // not enought shares
+    w.setSecret(
+      'shadow pistol academic always adequate wildlife fancy gross oasis cylinder mustang wrist rescue view short owner flip making coding armed',
+    );
+
+    assert.ok(w.getID());
+  });
+
   it('SLIP39LegacyP2PKHWallet can generate addresses', async () => {
     const w = new SLIP39LegacyP2PKHWallet();
     // 4. Basic sharing 2-of-3 (128 bits)

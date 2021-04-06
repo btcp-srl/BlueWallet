@@ -10,9 +10,10 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { useRoute, useTheme } from '@react-navigation/native';
+import { useRoute, useTheme, useNavigation } from '@react-navigation/native';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
+import AOPP from '../../class/aopp';
 import { BlueDoneAndDismissKeyboardInputAccessory, BlueFormLabel, BlueSpacing10, BlueSpacing20, SafeBlueArea } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
 import { FContainer, FButton } from '../../components/FloatButtons';
@@ -23,9 +24,10 @@ const SignVerify = () => {
   const { colors } = useTheme();
   const { wallets, sleep } = useContext(BlueStorageContext);
   const { params } = useRoute();
+  const navigation = useNavigation();
   const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
-  const [address, setAddress] = useState(params.address);
-  const [message, setMessage] = useState('');
+  const [address, setAddress] = useState(params.address ?? '');
+  const [message, setMessage] = useState(params.message ?? '');
   const [signature, setSignature] = useState('');
   const [loading, setLoading] = useState(false);
   const [messageHasFocus, setMessageHasFocus] = useState(false);
@@ -60,6 +62,16 @@ const SignVerify = () => {
     try {
       const newSignature = wallet.signMessage(message, address);
       setSignature(newSignature);
+      if (params.aoppURI) {
+        const aopp = new AOPP(params.aoppURI);
+        try {
+          await aopp.send({ address, signature: newSignature });
+          Alert.alert(loc._.success, loc.aopp.send_success);
+          navigation.dangerouslyGetParent().pop();
+        } catch (e) {
+          Alert.alert(loc.errors.error, loc.aopp.send_error);
+        }
+      }
     } catch (e) {
       ReactNativeHapticFeedback.trigger('notificationError', { ignoreAndroidSystemSettings: false });
       Alert.alert(loc.errors.error, e.message);
@@ -160,7 +172,11 @@ const SignVerify = () => {
           {!isKeyboardVisible && (
             <>
               <FContainer inline>
-                <FButton onPress={handleSign} text={loc.addresses.sign_sign} disabled={loading} />
+                <FButton
+                  onPress={handleSign}
+                  text={params.aoppURI ? loc.addresses.sign_sign_submit : loc.addresses.sign_sign}
+                  disabled={loading}
+                />
                 <FButton onPress={handleVerify} text={loc.addresses.sign_verify} disabled={loading} />
               </FContainer>
               <BlueSpacing10 />

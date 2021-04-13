@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  android:installLocation="auto"
-  package="io.bluewallet.bluewallet">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
+  package="it.bitcoinpeople.wallet.v2">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -20,7 +21,7 @@
       android:theme="@style/AppTheme">
 
         <meta-data  android:name="com.dieam.reactnativepushnotification.notification_channel_name"
-                    android:value="BlueWallet notifications"/> <!-- YOUR NOTIFICATION CHANNEL NAME -->
+                    android:value="Bitcoinpeople Baloo Wallet notifications"/> <!-- YOUR NOTIFICATION CHANNEL NAME -->
         <meta-data  android:name="com.dieam.reactnativepushnotification.notification_channel_description"
                     android:value="Notifications about incoming payments"/> <!-- YOUR NOTIFICATION CHANNEL DESCRIPTION -->
 
@@ -69,27 +70,28 @@
           <data android:scheme="bluewallet" />
           <data android:scheme="lapp" />
           <data android:scheme="blue" />
+          <data android:scheme="bitcoinpeople" /> <!-- todo va cambiare lo schema del protocollo? -->
         </intent-filter>
-        <intent-filter>
-  <action android:name="android.intent.action.VIEW" />
-  <action android:name="android.intent.action.EDIT" />
-  <category android:name="android.intent.category.DEFAULT" />
-  <data
-    android:mimeType="application/octet-stream"
-    android:host="*" 
-    android:pathPattern=".*\\.psbt"
-  />
-</intent-filter>
-        <intent-filter>
-  <action android:name="android.intent.action.VIEW" />
-  <action android:name="android.intent.action.EDIT" />
-  <category android:name="android.intent.category.DEFAULT" />
-  <data
-    android:mimeType="text/plain"
-    android:host="*" 
-    android:pathPattern=".*\\.psbt"
-  />
-</intent-filter>
+        <intent-filter tools:ignore="AppLinkUrlError">
+          <action android:name="android.intent.action.VIEW" />
+          <action android:name="android.intent.action.EDIT" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <data
+            android:mimeType="application/octet-stream"
+            android:host="*"
+            android:pathPattern=".*\\.psbt"
+          />
+        </intent-filter>
+        <intent-filter tools:ignore="AppLinkUrlError">
+          <action android:name="android.intent.action.VIEW" />
+          <action android:name="android.intent.action.EDIT" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <data
+            android:mimeType="text/plain"
+            android:host="*"
+            android:pathPattern=".*\\.psbt"
+          />
+        </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>

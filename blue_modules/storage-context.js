@@ -17,7 +17,7 @@ export const BlueStorageProvider = ({ children }) => {
   const [selectedWallet, setSelectedWallet] = useState('');
   const [walletTransactionUpdateStatus, setWalletTransactionUpdateStatus] = useState(WalletTransactionsStatus.NONE);
   const [walletsInitialized, setWalletsInitialized] = useState(false);
-  const [preferredFiatCurrency, _setPreferredFiatCurrency] = useState(FiatUnit.USD);
+  const [preferredFiatCurrency, _setPreferredFiatCurrency] = useState(FiatUnit.EUR);
   const [language, _setLanguage] = useState();
   const getPreferredCurrencyAsyncStorage = useAsyncStorage(AppStorage.PREFERRED_CURRENCY).getItem;
   const getLanguageAsyncStorage = useAsyncStorage(AppStorage.LANG).getItem;

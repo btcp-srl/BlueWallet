@@ -122,7 +122,7 @@ const WalletsRoot = () => {
       <WalletsStack.Screen name="WalletDetails" component={WalletDetails} options={WalletDetails.navigationOptions(theme)} />
       <WalletsStack.Screen name="TransactionDetails" component={TransactionDetails} options={TransactionDetails.navigationOptions(theme)} />
       <WalletsStack.Screen name="TransactionStatus" component={TransactionStatus} options={TransactionStatus.navigationOptions(theme)} />
-      <WalletsStack.Screen name="HodlHodl" component={HodlHodl} options={HodlHodl.navigationOptions(theme)} />
+        {/*<WalletsStack.Screen name="HodlHodl" component={HodlHodl} options={HodlHodl.navigationOptions(theme)} />*/}
       <WalletsStack.Screen name="HodlHodlViewOffer" component={HodlHodlViewOffer} options={HodlHodlViewOffer.navigationOptions(theme)} />
       <WalletsStack.Screen name="CPFP" component={CPFP} options={CPFP.navigationOptions(theme)} />
       <WalletsStack.Screen name="RBFBumpFee" component={RBFBumpFee} options={RBFBumpFee.navigationOptions(theme)} />

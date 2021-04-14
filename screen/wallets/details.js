@@ -241,28 +241,7 @@ const WalletDetails = () => {
     });
 
   const renderMarketplaceButton = () => {
-    return Platform.select({
-      android: (
-        <SecondButton
-          testID="Marketplace"
-          onPress={() =>
-            navigate('Marketplace', {
-              fromWallet: wallet,
-            })
-          }
-          title={loc.wallets.details_marketplace}
-        />
-      ),
-      ios: (
-        <SecondButton
-          testID="Marketplace"
-          onPress={async () => {
-            Linking.openURL('https://bluewallet.io/marketplace-btc/');
-          }}
-          title={loc.wallets.details_marketplace}
-        />
-      ),
-    });
+    return null
   };
 
   const exportInternals = async () => {

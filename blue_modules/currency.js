@@ -7,7 +7,7 @@ import BigNumber from 'bignumber.js';
 import { AppStorage } from '../class';
 import { FiatUnit, getFiatRate } from '../models/fiatUnit';
 
-let preferredFiatCurrency = FiatUnit.USD;
+let preferredFiatCurrency = FiatUnit.EUR;
 const exchangeRates = {};
 
 const STRUCT = {
@@ -53,7 +53,7 @@ async function updateExchangeRate() {
     if (Object.keys(FiatUnit).some(unit => unit === deviceCurrencies[0])) {
       preferredFiatCurrency = FiatUnit[deviceCurrencies[0]];
     } else {
-      preferredFiatCurrency = FiatUnit.USD;
+      preferredFiatCurrency = FiatUnit.EUR;
     }
   }
 
@@ -110,7 +110,7 @@ function satoshiToLocalCurrency(satoshi) {
   } catch (error) {
     console.warn(error);
     console.log(error);
-    formatter = new Intl.NumberFormat(FiatUnit.USD.locale, {
+    formatter = new Intl.NumberFormat(FiatUnit.EUR.locale, {
       style: 'currency',
       currency: preferredFiatCurrency.endPointKey,
       minimumFractionDigits: 2,

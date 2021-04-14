@@ -54,23 +54,18 @@ export default class BuyBitcoin extends Component {
       }
     }
 
-    let uri = 'https://bluewallet.io/buy-bitcoin-redirect.html?address=' + address;
-
-    if (preferredCurrency) {
-      uri += '&currency=' + preferredCurrency;
-    }
+    //todo integration
+    //todo login credentials as infinite token call
+    //todo get token from storage if logged, then pass it to get parameter and make frontend login with that token (+ call login with token)
+    //todo frontend buy call with precompiled address given from url
+    let uri = 'https://bitmoon.bitcoinpeople.it/'//buy?address=' + address;
+    console.log("buy_btc", uri)
     return uri;
   }
 
   async componentDidMount() {
     console.log('buyBitcoin - componentDidMount');
-
     let uri = await BuyBitcoin.generateURL(this.state.wallet);
-
-    const { safelloStateToken } = this.props.route.params;
-    if (safelloStateToken) {
-      uri += '&safelloStateToken=' + safelloStateToken;
-    }
     this.setState({ uri, isLoading: false });
   }
 

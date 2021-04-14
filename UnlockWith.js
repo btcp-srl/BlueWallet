@@ -133,7 +133,8 @@ const UnlockWith = () => {
       <SafeAreaView style={styles.root}>
         <StatusBar barStyle="default" />
         <View style={styles.container}>
-          <LottieView source={require('./img/bluewalletsplash.json')} progress={1} loop={false} />
+          {/*<LottieView source={require('./img/bluewalletsplash.json')} progress={1} loop={false} />
+             <Image source={require('./img/splash/splash.png')}/>*/}
           <View style={styles.biometric}>
             <View style={styles.biometricRow}>{renderUnlockOptions()}</View>
           </View>

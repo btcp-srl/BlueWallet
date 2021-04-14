@@ -338,37 +338,7 @@ const WalletTransactions = () => {
   };
 
   const renderMarketplaceButton = () => {
-    return Platform.select({
-      android: (
-        <TouchableOpacity
-          onPress={() => {
-            if (wallet.type === LightningCustodianWallet.type) {
-              navigate('LappBrowserRoot', {
-                screen: 'LappBrowser',
-                params: { fromSecret: wallet.getSecret(), fromWallet: wallet },
-              });
-            } else {
-              navigate('Marketplace', { fromWallet: wallet });
-            }
-          }}
-          style={[styles.marketplaceButton1, stylesHook.marketplaceButton1]}
-        >
-          <Text style={[styles.marketpalceText1, stylesHook.marketpalceText1]}>{loc.wallets.list_marketplace}</Text>
-        </TouchableOpacity>
-      ),
-      ios:
-        wallet.getBalance() > 0 ? (
-          <TouchableOpacity
-            onPress={async () => {
-              Linking.openURL('https://bluewallet.io/marketplace/');
-            }}
-            style={[styles.marketplaceButton1, stylesHook.marketplaceButton1]}
-          >
-            <Icon name="external-link" size={18} type="font-awesome" color="#9aa0aa" />
-            <Text style={[styles.marketpalceText2, stylesHook.marketpalceText2]}>{loc.wallets.list_marketplace}</Text>
-          </TouchableOpacity>
-        ) : null,
-    });
+    return null
   };
 
   const renderLappBrowserButton = () => {

@@ -80,6 +80,7 @@ import DrawerList from './screen/wallets/drawerList';
 import { isCatalyst, isTablet } from './blue_modules/environment';
 import SettingsPrivacy from './screen/settings/SettingsPrivacy';
 import LNDViewAdditionalInvoicePreImage from './screen/lnd/lndViewAdditionalInvoicePreImage';
+import BitmoonLogin from "./screen/bitmoonLogin";
 
 const defaultScreenOptions =
   Platform.OS === 'ios'
@@ -500,8 +501,9 @@ const Navigation = () => {
       <RootStack.Screen name="WalletXpubRoot" component={WalletXpubStackRoot} options={{ headerShown: false }} />
       <RootStack.Screen name="SignVerifyRoot" component={SignVerifyStackRoot} options={{ headerShown: false }} />
       <RootStack.Screen name="BuyBitcoin" component={BuyBitcoin} options={BuyBitcoin.navigationOptions(theme)} />
-      <RootStack.Screen name="Marketplace" component={Marketplace} options={Marketplace.navigationOptions(theme)} />
-      <RootStack.Screen name="SelectWallet" component={SelectWallet} options={{ headerLeft: null }} />
+      {/*<RootStack.Screen name="Marketplace" component={Marketplace} options={Marketplace.navigationOptions(theme)} />*/}
+        <RootStack.Screen name="SelectWallet" component={SelectWallet} options={{ headerLeft: null }} />
+        <RootStack.Screen name="BitmoonLogin" component={BitmoonLogin} options={BitmoonLogin.navigationOptions(theme)} />
       <RootStack.Screen name="ReceiveDetailsRoot" component={ReceiveDetailsStackRoot} options={{ headerShown: false }} />
       <RootStack.Screen name="LappBrowserRoot" component={LappBrowserStackRoot} options={{ headerShown: false }} />
 

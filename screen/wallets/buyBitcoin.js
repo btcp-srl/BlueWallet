@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, Linking, Platform } from 'react-native';
+import {StatusBar, Linking, Platform, Alert} from 'react-native';
 import { WebView } from 'react-native-webview';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
-
+import Toast from "react-native-toast-message"
 import { BlueLoading, SafeBlueArea } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
 import { LightningCustodianWallet, WatchOnlyWallet } from '../../class';
 import * as NavigationService from '../../NavigationService';
 import { BlueStorageContext } from '../../blue_modules/storage-context';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import {navigate} from "../../NavigationService";
 const currency = require('../../blue_modules/currency');
 
 export default class BuyBitcoin extends Component {
@@ -54,17 +56,31 @@ export default class BuyBitcoin extends Component {
       }
     }
 
-    //todo integration
-    //todo login credentials as infinite token call
-    //todo get token from storage if logged, then pass it to get parameter and make frontend login with that token (+ call login with token)
     //todo frontend buy call with precompiled address given from url
-    let uri = 'https://bitmoon.bitcoinpeople.it/'//buy?address=' + address;
+    let uri = 'https://bitmoon.bitcoinpeople.it/main/purchase?address=' + address;
     console.log("buy_btc", uri)
     return uri;
   }
 
   async componentDidMount() {
     console.log('buyBitcoin - componentDidMount');
+
+    if((await AsyncStorage.getItem("BITMOON_LOGIN")) !== "true")
+      Alert.alert(
+          "Utente non loggato",
+          "Non hai effettuato l'accesso a Bitmoon! per continuare alla pagina di login fare tap su `Procedi`; per salvare le proprie credenziali internamente all'app premere su `Registra`",
+          [
+            {
+              text: "Registra",
+              onPress: () => navigate("BitmoonLogin"),
+              style: "cancel"
+            },
+            { text: "Procedi", onPress: () => {} }
+          ]
+      );
+
+    console.log(await AsyncStorage.getItem("BITMOON_TOKEN"))
+
     let uri = await BuyBitcoin.generateURL(this.state.wallet);
     this.setState({ uri, isLoading: false });
   }

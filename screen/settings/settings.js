@@ -38,7 +38,8 @@ const Settings = () => {
         />
       )}
       <BlueListItem title={loc.settings.privacy} onPress={() => navigate('SettingsPrivacy')} testID="SettingsPrivacy" chevron />
-      <BlueListItem title={loc.settings.about} onPress={() => navigate('About')} testID="AboutButton" chevron />
+        <BlueListItem title={loc.settings.about} onPress={() => navigate('About')} testID="AboutButton" chevron />
+        <BlueListItem title={"Bitmoon Account"} onPress={() => navigate('BitmoonLogin')} testID="AboutButton" chevron />
     </ScrollView>
   );
 };

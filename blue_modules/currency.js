@@ -53,7 +53,7 @@ async function updateExchangeRate() {
     if (Object.keys(FiatUnit).some(unit => unit === deviceCurrencies[0])) {
       preferredFiatCurrency = FiatUnit[deviceCurrencies[0]];
     } else {
-      preferredFiatCurrency = FiatUnit.EUR;
+      preferredFiatCurrency = FiatUnit.USD;
     }
   }
 
@@ -110,7 +110,7 @@ function satoshiToLocalCurrency(satoshi) {
   } catch (error) {
     console.warn(error);
     console.log(error);
-    formatter = new Intl.NumberFormat(FiatUnit.EUR.locale, {
+    formatter = new Intl.NumberFormat(FiatUnit.USD.locale, {
       style: 'currency',
       currency: preferredFiatCurrency.endPointKey,
       minimumFractionDigits: 2,

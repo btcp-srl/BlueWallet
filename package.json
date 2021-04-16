@@ -166,6 +166,7 @@
     "react-native-sortable-list": "0.0.24",
     "react-native-svg": "12.1.0",
     "react-native-tcp-socket": "3.7.1",
+    "react-native-toast-message": "^1.4.9",
     "react-native-tooltip": "git+https://github.com/BlueWallet/react-native-tooltip.git#d369e7ece09e4dec73873f1cfeac83e9d35294a6",
     "react-native-vector-icons": "7.1.0",
     "react-native-watch-connectivity": "1.0.3",
@@ -180,8 +181,7 @@
     "stream-browserify": "2.0.2",
     "url": "0.11.0",
     "util": "0.12.3",
-    "wif": "2.0.6",
-    "react-native-toast-message": "^1.4.9"
+    "wif": "2.0.6"
   },
   "react-native": {
     "crypto": "bluewallet/blue_modules/crypto",

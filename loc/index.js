@@ -169,8 +169,8 @@ const setLanguageLocale = async () => {
       strings.saveLanguage(locales[0].languageCode);
       strings.setLanguage(locales[0].languageCode);
     } else {
-      strings.saveLanguage('en');
-      strings.setLanguage('en');
+      strings.saveLanguage('it');
+      strings.setLanguage('it');
       if (process.env.JEST_WORKER_ID === undefined) {
         I18nManager.allowRTL(false);
         I18nManager.forceRTL(false);

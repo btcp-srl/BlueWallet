@@ -28,7 +28,7 @@ import navigationStyle from '../../components/navigationStyle';
 import Privacy from '../../blue_modules/Privacy';
 import { BitcoinUnit } from '../../models/bitcoinUnits';
 import loc from '../../loc';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import { DynamicQRCode } from '../../components/DynamicQRCode';
 const currency = require('../../blue_modules/currency');
 
@@ -187,13 +187,13 @@ export default class SendCreate extends Component {
 
 const styles = StyleSheet.create({
   transactionDetailsTitle: {
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
     fontWeight: '500',
     fontSize: 17,
     marginBottom: 2,
   },
   transactionDetailsSubtitle: {
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontWeight: '500',
     fontSize: 15,
     marginBottom: 20,
@@ -205,19 +205,19 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
   },
   separator: {
-    backgroundColor: BlueCurrentTheme.colors.inputBorderColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBorderColor,
     height: 0.5,
     marginVertical: 16,
   },
   root: {
-    backgroundColor: BlueCurrentTheme.colors.elevated,
+    backgroundColor: BtcpCurrentTheme.colors.elevated,
   },
   card: {
     alignItems: 'center',
     flex: 1,
   },
   cardText: {
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontWeight: '500',
   },
   cardTx: {
@@ -260,7 +260,7 @@ SendCreate.navigationOptions = navigationStyle({}, (options, { theme, navigation
   if (route.params.exportTXN) {
     headerRight = () => (
       <TouchableOpacity style={styles.export} onPress={route.params.exportTXN}>
-        <Icon size={22} name="share-alternative" type="entypo" color={BlueCurrentTheme.colors.foregroundColor} />
+        <Icon size={22} name="share-alternative" type="entypo" color={BtcpCurrentTheme.colors.foregroundColor} />
       </TouchableOpacity>
     );
   } else {

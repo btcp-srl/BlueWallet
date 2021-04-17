@@ -7,7 +7,7 @@ import { Button } from 'react-native-elements';
 import navigationStyle from '../../components/navigationStyle';
 import { BlueButton, BlueCard, BlueCopyToClipboardButton, BlueListItem, BlueLoading, BlueSpacing20, BlueText } from '../../BlueComponents';
 import loc from '../../loc';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import Notifications from '../../blue_modules/notifications';
 
 const NotificationSettings = () => {
@@ -164,11 +164,11 @@ const styles = StyleSheet.create({
   },
   uri: {
     flexDirection: 'row',
-    borderColor: BlueCurrentTheme.colors.formBorder,
-    borderBottomColor: BlueCurrentTheme.colors.formBorder,
+    borderColor: BtcpCurrentTheme.colors.formBorder,
+    borderBottomColor: BtcpCurrentTheme.colors.formBorder,
     borderWidth: 1,
     borderBottomWidth: 0.5,
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
     minHeight: 44,
     height: 44,
     alignItems: 'center',

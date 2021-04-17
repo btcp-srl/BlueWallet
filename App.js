@@ -71,7 +71,7 @@ const App = () => {
   const colorScheme = useColorScheme();
   const stylesHook = StyleSheet.create({
     modalContent: {
-      backgroundColor: colorScheme === 'dark' ? BlueDarkTheme.colors.elevated : BlueDefaultTheme.colors.elevated,
+      backgroundColor: colorScheme === 'dark' ? BtcpDarkTheme.colors.elevated : BtcpDefaultTheme.colors.elevated,
     },
   });
 
@@ -113,11 +113,11 @@ const App = () => {
 
   useEffect(() => {
     if (colorScheme) {
-      BlueCurrentTheme.updateColorScheme();
+      BtcpCurrentTheme.updateColorScheme();
       if (colorScheme === 'light') {
-        changeNavigationBarColor(BlueDefaultTheme.colors.background, true, true);
+        changeNavigationBarColor(BtcpDefaultTheme.colors.background, true, true);
       } else {
-        changeNavigationBarColor(BlueDarkTheme.colors.buttonBackgroundColor, false, true);
+        changeNavigationBarColor(BtcpDarkTheme.colors.buttonBackgroundColor, false, true);
       }
     }
   }, [colorScheme]);
@@ -339,7 +339,7 @@ const App = () => {
     <SafeAreaProvider>
       <View style={styles.root}>
         <StatusBar barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'} backgroundColor="transparent" translucent />
-        <NavigationContainer ref={navigationRef} theme={colorScheme === 'dark' ? BlueDarkTheme : BlueDefaultTheme}>
+        <NavigationContainer ref={navigationRef} theme={colorScheme === 'dark' ? BtcpDarkTheme : BtcpDefaultTheme}>
           <InitRoot />
           <Notifications onProcessNotifications={processPushNotifications} />
           {renderClipboardContentModal()}

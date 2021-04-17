@@ -5,7 +5,7 @@ import { Dimensions, PixelRatio, View, ScrollView, Text, Image, TouchableOpacity
 import { Icon } from 'react-native-elements';
 import { useNavigation, useRoute, useTheme } from '@react-navigation/native';
 
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import { FContainer, FButton } from '../../components/FloatButtons';
 import { BlueSpacing20, SafeBlueArea, BlueTabs } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
@@ -302,7 +302,7 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: BlueCurrentTheme.colors.lightButton,
+    borderColor: BtcpCurrentTheme.colors.lightButton,
     margin: 10,
     padding: 10,
     maxWidth: 100,
@@ -333,7 +333,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     aspectRatio: 1,
-    borderColor: BlueCurrentTheme.colors.buttonBackgroundColor,
+    borderColor: BtcpCurrentTheme.colors.buttonBackgroundColor,
   },
   diceIcon: {
     margin: 3,

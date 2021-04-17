@@ -38,7 +38,7 @@ import { encodeUR } from 'bc-ur/dist';
 import QRCode from 'react-native-qrcode-svg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useTheme } from '@react-navigation/native';
-import { BlueCurrentTheme } from './components/themes';
+import { BtcpCurrentTheme } from './components/themes';
 import loc, { formatBalance, formatBalanceWithoutSuffix, transactionTimeToReadable } from './loc';
 import Lnurl from './class/lnurl';
 import { BlueStorageContext } from './blue_modules/storage-context';
@@ -59,7 +59,7 @@ Platform.OS === 'android' ? (ActivityIndicator.defaultProps.color = PlatformColo
 export const BlueButton = props => {
   const { colors } = useTheme();
 
-  let backgroundColor = props.backgroundColor ? props.backgroundColor : colors.mainColor || BlueCurrentTheme.colors.mainColor;
+  let backgroundColor = props.backgroundColor ? props.backgroundColor : colors.mainColor || BtcpCurrentTheme.colors.mainColor;
   let fontColor = props.buttonTextColor || colors.buttonTextColor;
   if (props.disabled === true) {
     backgroundColor = colors.buttonDisabledBackgroundColor;
@@ -1661,24 +1661,24 @@ export class BlueReplaceFeeSuggestions extends Component {
               onPress={() => this.onFeeSelected(type)}
               style={[
                 { paddingHorizontal: 16, paddingVertical: 8, marginBottom: 10 },
-                active && { borderRadius: 8, backgroundColor: BlueCurrentTheme.colors.incomingBackgroundColor },
+                active && { borderRadius: 8, backgroundColor: BtcpCurrentTheme.colors.incomingBackgroundColor },
               ]}
             >
               <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
-                <Text style={{ fontSize: 22, color: BlueCurrentTheme.colors.successColor, fontWeight: '600' }}>{label}</Text>
+                <Text style={{ fontSize: 22, color: BtcpCurrentTheme.colors.successColor, fontWeight: '600' }}>{label}</Text>
                 <View
                   style={{
-                    backgroundColor: BlueCurrentTheme.colors.successColor,
+                    backgroundColor: BtcpCurrentTheme.colors.successColor,
                     borderRadius: 5,
                     paddingHorizontal: 6,
                     paddingVertical: 3,
                   }}
                 >
-                  <Text style={{ color: BlueCurrentTheme.colors.background }}>~{time}</Text>
+                  <Text style={{ color: BtcpCurrentTheme.colors.background }}>~{time}</Text>
                 </View>
               </View>
               <View style={{ justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'center' }}>
-                <Text style={{ color: BlueCurrentTheme.colors.successColor }}>{rate} sat/byte</Text>
+                <Text style={{ color: BtcpCurrentTheme.colors.successColor }}>{rate} sat/byte</Text>
               </View>
             </TouchableOpacity>
           ))}
@@ -1688,12 +1688,12 @@ export class BlueReplaceFeeSuggestions extends Component {
             { paddingHorizontal: 16, paddingVertical: 8, marginBottom: 10 },
             selectedFeeType === NetworkTransactionFeeType.CUSTOM && {
               borderRadius: 8,
-              backgroundColor: BlueCurrentTheme.colors.incomingBackgroundColor,
+              backgroundColor: BtcpCurrentTheme.colors.incomingBackgroundColor,
             },
           ]}
         >
           <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
-            <Text style={{ fontSize: 22, color: BlueCurrentTheme.colors.successColor, fontWeight: '600' }}>{loc.send.fee_custom}</Text>
+            <Text style={{ fontSize: 22, color: BtcpCurrentTheme.colors.successColor, fontWeight: '600' }}>{loc.send.fee_custom}</Text>
           </View>
           <View style={{ justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', marginTop: 5 }}>
             <TextInput
@@ -1703,10 +1703,10 @@ export class BlueReplaceFeeSuggestions extends Component {
               ref={ref => (this.customTextInput = ref)}
               maxLength={9}
               style={{
-                backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
-                borderBottomColor: BlueCurrentTheme.colors.formBorder,
+                backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
+                borderBottomColor: BtcpCurrentTheme.colors.formBorder,
                 borderBottomWidth: 0.5,
-                borderColor: BlueCurrentTheme.colors.formBorder,
+                borderColor: BtcpCurrentTheme.colors.formBorder,
                 borderRadius: 4,
                 borderWidth: 1.0,
                 color: '#81868e',
@@ -1722,10 +1722,10 @@ export class BlueReplaceFeeSuggestions extends Component {
               placeholderTextColor="#81868e"
               inputAccessoryViewID={BlueDismissKeyboardInputAccessory.InputAccessoryViewID}
             />
-            <Text style={{ color: BlueCurrentTheme.colors.successColor }}>sat/byte</Text>
+            <Text style={{ color: BtcpCurrentTheme.colors.successColor }}>sat/byte</Text>
           </View>
         </TouchableOpacity>
-        <BlueText style={{ color: BlueCurrentTheme.colors.alternativeTextColor }}>
+        <BlueText style={{ color: BtcpCurrentTheme.colors.alternativeTextColor }}>
           {loc.formatString(loc.send.fee_replace_min, { min: this.props.transactionMinimum })}
         </BlueText>
       </View>
@@ -1785,7 +1785,7 @@ export const BlueTabs = ({ active, onSwitch, tabs }) => (
         style={[
           tabsStyles.tabRoot,
           active === i && {
-            borderColor: BlueCurrentTheme.colors.buttonAlternativeTextColor,
+            borderColor: BtcpCurrentTheme.colors.buttonAlternativeTextColor,
             borderBottomWidth: 2,
           },
         ]}
@@ -1874,7 +1874,7 @@ export class DynamicQRCode extends Component {
             value={currentFragment.toUpperCase()}
             size={this.state.qrCodeHeight}
             color="#000000"
-            logoBackgroundColor={BlueCurrentTheme.colors.brandingColor}
+            logoBackgroundColor={BtcpCurrentTheme.colors.brandingColor}
             backgroundColor="#FFFFFF"
             ecl="L"
           />
@@ -1945,7 +1945,7 @@ const animatedQRCodeStyle = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontWeight: 'bold',
   },
 });

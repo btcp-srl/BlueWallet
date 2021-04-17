@@ -19,7 +19,7 @@ import { BlueButton, BlueCopyTextToClipboard, BlueLoading, BlueSpacing10, BlueSp
 import navigationStyle from '../../components/navigationStyle';
 import { HodlHodlApi } from '../../class/hodl-hodl-api';
 import * as NavigationService from '../../NavigationService';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import BottomModal from '../../components/BottomModal';
 import loc from '../../loc';
 import { BlueStorageContext } from '../../blue_modules/storage-context';

@@ -18,7 +18,7 @@ import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 
 import { BlueButton, BlueCard, BlueReplaceFeeSuggestions, BlueSpacing, BlueSpacing20, BlueText, SafeBlueArea } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import { HDSegwitBech32Transaction, HDSegwitBech32Wallet } from '../../class';
 import loc from '../../loc';
 import { BlueStorageContext } from '../../blue_modules/storage-context';
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   hex: {
-    color: BlueCurrentTheme.colors.buttonAlternativeTextColor,
+    color: BtcpCurrentTheme.colors.buttonAlternativeTextColor,
     fontWeight: '500',
   },
   hexInput: {

@@ -4,7 +4,7 @@ import { Text } from 'react-native-elements';
 import { Dimensions, LayoutAnimation, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { encodeUR } from 'bc-ur/dist';
 import QRCode from 'react-native-qrcode-svg';
-import { BlueCurrentTheme } from '../components/themes';
+import { BtcpCurrentTheme } from '../components/themes';
 import { BlueSpacing20 } from '../BlueComponents';
 import loc from '../loc';
 
@@ -117,7 +117,7 @@ export class DynamicQRCode extends Component {
               value={currentFragment.toUpperCase()}
               size={this.state.qrCodeHeight}
               color="#000000"
-              logoBackgroundColor={BlueCurrentTheme.colors.brandingColor}
+              logoBackgroundColor={BtcpCurrentTheme.colors.brandingColor}
               backgroundColor="#FFFFFF"
               ecl="L"
               onError={this.onError}
@@ -191,7 +191,7 @@ const animatedQRCodeStyle = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontWeight: 'bold',
   },
 });

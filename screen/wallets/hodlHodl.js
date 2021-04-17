@@ -25,7 +25,7 @@ import { BlueButtonLink, SafeBlueArea } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
 import { HodlHodlApi } from '../../class/hodl-hodl-api';
 import * as NavigationService from '../../NavigationService';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import BottomModal from '../../components/BottomModal';
 import loc from '../../loc';
 import { BlueStorageContext } from '../../blue_modules/storage-context';
@@ -708,7 +708,7 @@ export default class HodlHodl extends Component {
                 name="place"
                 type="material"
                 size={20}
-                color={BlueCurrentTheme.colors.foregroundColor}
+                color={BtcpCurrentTheme.colors.foregroundColor}
                 containerStyle={styles.paddingLeft10}
               />
               {this.state.isLoading ? (
@@ -730,7 +730,7 @@ export default class HodlHodl extends Component {
                   name="filter-list"
                   type="material"
                   size={24}
-                  color={BlueCurrentTheme.colors.foregroundColor}
+                  color={BtcpCurrentTheme.colors.foregroundColor}
                   containerStyle={styles.paddingLeft10}
                 />
               </TouchableOpacity>
@@ -876,7 +876,7 @@ const styles = StyleSheet.create({
     color: '#9AA0AA',
   },
   modalContent: {
-    backgroundColor: BlueCurrentTheme.colors.elevated,
+    backgroundColor: BtcpCurrentTheme.colors.elevated,
     padding: 22,
     justifyContent: 'center',
     alignItems: 'center',
@@ -887,7 +887,7 @@ const styles = StyleSheet.create({
     height: 400,
   },
   modalContentShort: {
-    backgroundColor: BlueCurrentTheme.colors.elevated,
+    backgroundColor: BtcpCurrentTheme.colors.elevated,
     padding: 22,
     justifyContent: 'center',
     alignItems: 'center',
@@ -900,14 +900,14 @@ const styles = StyleSheet.create({
   Title: {
     fontWeight: 'bold',
     fontSize: 30,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
   },
   BottomLine: {
     fontSize: 10,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
   },
   grayDropdownTextContainer: {
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
     borderRadius: 20,
     height: 35,
     top: 3,
@@ -919,7 +919,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   grayTextContainerContainer: {
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
     borderRadius: 20,
     height: 44,
     justifyContent: 'center',
@@ -933,7 +933,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   blueText: {
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontSize: 15,
     fontWeight: '600',
   },
@@ -947,7 +947,7 @@ const styles = StyleSheet.create({
   locationText: {
     top: 0,
     left: 5,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontSize: 20,
     fontWeight: '500',
   },

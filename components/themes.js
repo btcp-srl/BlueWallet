@@ -1,7 +1,7 @@
 import { DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { Appearance } from 'react-native';
 
-export const BlueDefaultTheme = {
+export const BtcpDefaultTheme = {
   ...DefaultTheme,
   closeImage: require('../img/close.png'),
   scanImage: require('../img/scan.png'),
@@ -63,12 +63,12 @@ export const BlueDefaultTheme = {
   },
 };
 
-export const BlueDarkTheme = {
+export const BtcpDarkTheme = {
   ...DarkTheme,
   closeImage: require('../img/close-white.png'),
   scanImage: require('../img/scan-white.png'),
   colors: {
-    ...BlueDefaultTheme.colors,
+    ...BtcpDefaultTheme.colors,
     ...DarkTheme.colors,
     brandingColor: '#000000',
     borderTopColor: '#9aa0aa',
@@ -111,13 +111,13 @@ export const BlueDarkTheme = {
   },
 };
 
-export class BlueCurrentTheme {
+export class BtcpCurrentTheme {
   static updateColorScheme() {
     const isColorSchemeDark = Appearance.getColorScheme() === 'dark';
-    BlueCurrentTheme.colors = isColorSchemeDark ? BlueDarkTheme.colors : BlueDefaultTheme.colors;
-    BlueCurrentTheme.closeImage = isColorSchemeDark ? BlueDarkTheme.closeImage : BlueDefaultTheme.closeImage;
-    BlueCurrentTheme.scanImage = isColorSchemeDark ? BlueDarkTheme.scanImage : BlueDefaultTheme.scanImage;
+    BtcpCurrentTheme.colors = isColorSchemeDark ? BtcpDarkTheme.colors : BtcpDefaultTheme.colors;
+    BtcpCurrentTheme.closeImage = isColorSchemeDark ? BtcpDarkTheme.closeImage : BtcpDefaultTheme.closeImage;
+    BtcpCurrentTheme.scanImage = isColorSchemeDark ? BtcpDarkTheme.scanImage : BtcpDefaultTheme.scanImage;
   }
 }
 
-BlueCurrentTheme.updateColorScheme();
+BtcpCurrentTheme.updateColorScheme();

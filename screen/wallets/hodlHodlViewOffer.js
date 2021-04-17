@@ -8,7 +8,7 @@ import navigationStyle from '../../components/navigationStyle';
 import { BlueButton, BlueLoading, BlueSpacing10, SafeBlueArea } from '../../BlueComponents';
 import { HodlHodlApi } from '../../class/hodl-hodl-api';
 import * as NavigationService from '../../NavigationService';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import loc from '../../loc';
 import { BlueStorageContext } from '../../blue_modules/storage-context';
 const prompt = require('../../blue_modules/prompt');
@@ -278,19 +278,19 @@ HodlHodlViewOffer.propTypes = {
 
 const styles = StyleSheet.create({
   modalContent: {
-    backgroundColor: BlueCurrentTheme.colors.background,
+    backgroundColor: BtcpCurrentTheme.colors.background,
     padding: 22,
   },
   Title: {
     fontWeight: '600',
     fontSize: 24,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
   },
   circleWhite: {
     position: 'absolute',
     bottom: 0,
     right: 3,
-    backgroundColor: BlueCurrentTheme.colors.background,
+    backgroundColor: BtcpCurrentTheme.colors.background,
     width: 13,
     height: 13,
     borderRadius: 6,
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   grayTextContainerContainer: {
-    backgroundColor: BlueCurrentTheme.colors.lightButton,
+    backgroundColor: BtcpCurrentTheme.colors.lightButton,
     borderRadius: 20,
     height: 30,
     justifyContent: 'center',
@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
   },
   greenTextContainerContainer: {
-    backgroundColor: BlueCurrentTheme.colors.feeLabel,
+    backgroundColor: BtcpCurrentTheme.colors.feeLabel,
     borderRadius: 20,
     height: 30,
     justifyContent: 'center',
@@ -332,7 +332,7 @@ const styles = StyleSheet.create({
   },
   priceText: {
     top: 0,
-    color: BlueCurrentTheme.colors.feeValue,
+    color: BtcpCurrentTheme.colors.feeValue,
     fontSize: 14,
     fontWeight: '500',
   },
@@ -347,7 +347,7 @@ const styles = StyleSheet.create({
     lineHeight: 23,
   },
   nicknameText: {
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontSize: 16,
     fontWeight: 'bold',
   },
@@ -358,19 +358,19 @@ const styles = StyleSheet.create({
   locationText: {
     color: '#9BA0A9',
   },
-  horizontalScrollIemHeader: { color: BlueCurrentTheme.colors.feeText },
-  horizontalScrollItemBody: { fontSize: 14, fontWeight: 'bold', color: BlueCurrentTheme.colors.foregroundColor },
+  horizontalScrollIemHeader: { color: BtcpCurrentTheme.colors.feeText },
+  horizontalScrollItemBody: { fontSize: 14, fontWeight: 'bold', color: BtcpCurrentTheme.colors.foregroundColor },
   horizontalScrollWrapper: { flexDirection: 'column', paddingTop: 20, paddingBottom: 20, paddingRight: 40 },
   flexDirRow: { flexDirection: 'row' },
   iconWithPadding: { paddingLeft: 16 },
   _hr: {
     borderWidth: 0,
     borderBottomWidth: 1,
-    borderColor: BlueCurrentTheme.colors.lightBorder,
+    borderColor: BtcpCurrentTheme.colors.lightBorder,
   },
   avatarImg: { width: 60, height: 60, borderRadius: 60 },
   avatarWrapper: {
-    backgroundColor: BlueCurrentTheme.colors.background,
+    backgroundColor: BtcpCurrentTheme.colors.background,
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',

@@ -17,7 +17,7 @@ import {
 } from '../../BlueComponents';
 import navigationStyle from '../../components/navigationStyle';
 import AmountInput from '../../components/AmountInput';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import Lnurl from '../../class/lnurl';
 import { BitcoinUnit, Chain } from '../../models/bitcoinUnits';
 import loc, { formatBalanceWithoutSuffix } from '../../loc';
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
   root: {
     flex: 1,
-    backgroundColor: BlueCurrentTheme.colors.background,
+    backgroundColor: BtcpCurrentTheme.colors.background,
   },
   walletSelectRoot: {
     marginBottom: 16,
@@ -250,18 +250,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   walletWrapLabel: {
-    color: BlueCurrentTheme.colors.buttonAlternativeTextColor,
+    color: BtcpCurrentTheme.colors.buttonAlternativeTextColor,
     fontSize: 14,
   },
   walletWrapBalance: {
-    color: BlueCurrentTheme.colors.buttonAlternativeTextColor,
+    color: BtcpCurrentTheme.colors.buttonAlternativeTextColor,
     fontSize: 14,
     fontWeight: '600',
     marginLeft: 4,
     marginRight: 4,
   },
   walletWrapSats: {
-    color: BlueCurrentTheme.colors.buttonAlternativeTextColor,
+    color: BtcpCurrentTheme.colors.buttonAlternativeTextColor,
     fontSize: 11,
     fontWeight: '600',
     textAlignVertical: 'bottom',

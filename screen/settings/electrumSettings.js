@@ -12,7 +12,7 @@ import { AppStorage } from '../../class';
 import DeeplinkSchemaMatch from '../../class/deeplink-schema-match';
 import navigationStyle from '../../components/navigationStyle';
 import { BlueButton, BlueButtonLink, BlueCard, BlueLoading, BlueSpacing20, BlueText, SafeBlueArea } from '../../BlueComponents';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 const BlueElectrum = require('../../blue_modules/BlueElectrum');
 
 export default class ElectrumSettings extends Component {
@@ -327,7 +327,7 @@ ElectrumSettings.navigationOptions = navigationStyle({}, opts => ({ ...opts, tit
 const styles = StyleSheet.create({
   status: {
     textAlign: 'center',
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
     marginBottom: 4,
   },
   connectWrap: {
@@ -345,35 +345,35 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   containerConnected: {
-    backgroundColor: BlueCurrentTheme.colors.feeLabel,
+    backgroundColor: BtcpCurrentTheme.colors.feeLabel,
   },
   containerDisconnected: {
-    backgroundColor: BlueCurrentTheme.colors.redBG,
+    backgroundColor: BtcpCurrentTheme.colors.redBG,
   },
   textConnected: {
-    color: BlueCurrentTheme.colors.feeValue,
+    color: BtcpCurrentTheme.colors.feeValue,
     fontWeight: 'bold',
   },
   textDisconnected: {
-    color: BlueCurrentTheme.colors.redText,
+    color: BtcpCurrentTheme.colors.redText,
     fontWeight: 'bold',
   },
   hostname: {
     textAlign: 'center',
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
   },
   explain: {
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
     marginBottom: -24,
     flexShrink: 1,
   },
   inputWrap: {
     flexDirection: 'row',
-    borderColor: BlueCurrentTheme.colors.formBorder,
-    borderBottomColor: BlueCurrentTheme.colors.formBorder,
+    borderColor: BtcpCurrentTheme.colors.formBorder,
+    borderBottomColor: BtcpCurrentTheme.colors.formBorder,
     borderWidth: 1,
     borderBottomWidth: 0.5,
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
     minHeight: 44,
     height: 44,
     alignItems: 'center',
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 20,
-    borderBottomColor: BlueCurrentTheme.colors.formBorder,
+    borderBottomColor: BtcpCurrentTheme.colors.formBorder,
     borderBottomWidth: 1,
   },
 });

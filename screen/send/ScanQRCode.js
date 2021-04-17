@@ -8,7 +8,7 @@ import { decodeUR, extractSingleWorkload } from 'bc-ur';
 import { useNavigation, useRoute, useIsFocused, useTheme } from '@react-navigation/native';
 import loc from '../../loc';
 import { BlueLoading, BlueText, BlueButton, BlueSpacing40 } from '../../BlueComponents';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import { openPrivacyDesktopSettings } from '../../class/camera';
 
 const LocalQRCode = require('@remobile/react-native-qrcode-local-image');
@@ -76,12 +76,12 @@ const styles = StyleSheet.create({
     height: '50%',
     marginTop: 5,
     marginHorizontal: 20,
-    borderColor: BlueCurrentTheme.colors.formBorder,
-    borderBottomColor: BlueCurrentTheme.colors.formBorder,
+    borderColor: BtcpCurrentTheme.colors.formBorder,
+    borderBottomColor: BtcpCurrentTheme.colors.formBorder,
     borderWidth: 1,
     borderRadius: 4,
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     textAlignVertical: 'top',
   },
 });

@@ -12,7 +12,7 @@ import navigationStyle from '../../components/navigationStyle';
 import { BitcoinUnit } from '../../models/bitcoinUnits';
 import Biometric from '../../class/biometrics';
 import loc, { formatBalance, formatBalanceWithoutSuffix } from '../../loc';
-import { BlueCurrentTheme } from '../../components/themes';
+import { BtcpCurrentTheme } from '../../components/themes';
 import Notifications from '../../blue_modules/notifications';
 import { BlueStorageContext } from '../../blue_modules/storage-context';
 const currency = require('../../blue_modules/currency');
@@ -224,19 +224,19 @@ export default class Confirm extends Component {
 
 const styles = StyleSheet.create({
   transactionDetailsTitle: {
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
     fontWeight: '500',
     fontSize: 17,
     marginBottom: 2,
   },
   transactionDetailsSubtitle: {
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
     fontWeight: '500',
     fontSize: 15,
     marginBottom: 20,
   },
   transactionAmountFiat: {
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
     fontWeight: '500',
     fontSize: 15,
     marginVertical: 20,
@@ -247,12 +247,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   valueValue: {
-    color: BlueCurrentTheme.colors.alternativeTextColor2,
+    color: BtcpCurrentTheme.colors.alternativeTextColor2,
     fontSize: 36,
     fontWeight: '600',
   },
   valueUnit: {
-    color: BlueCurrentTheme.colors.alternativeTextColor2,
+    color: BtcpCurrentTheme.colors.alternativeTextColor2,
     fontSize: 16,
     marginHorizontal: 4,
     paddingBottom: 6,
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
   },
   root: {
     paddingTop: 19,
-    backgroundColor: BlueCurrentTheme.colors.elevated,
+    backgroundColor: BtcpCurrentTheme.colors.elevated,
   },
   rootWrap: {
     marginTop: 16,
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     marginVertical: 24,
   },
   txText: {
-    color: BlueCurrentTheme.colors.buttonTextColor,
+    color: BtcpCurrentTheme.colors.buttonTextColor,
     fontSize: 15,
     fontWeight: '500',
     alignSelf: 'center',

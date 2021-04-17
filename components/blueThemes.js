@@ -1,7 +1,7 @@
 import { DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { Appearance } from 'react-native';
 
-export const BtcpDefaultTheme = {
+export const BlueDefaultTheme = {
   ...DefaultTheme,
   closeImage: require('../img/close.png'),
   scanImage: require('../img/scan.png'),
@@ -63,7 +63,7 @@ export const BtcpDefaultTheme = {
   },
 };
 
-export const BtcpDarkTheme = {
+export const BlueDarkTheme = {
   ...DarkTheme,
   closeImage: require('../img/close-white.png'),
   scanImage: require('../img/scan-white.png'),
@@ -111,7 +111,7 @@ export const BtcpDarkTheme = {
   },
 };
 
-export class BtcpCurrentTheme {
+export class BlueCurrentTheme {
   static updateColorScheme() {
     const isColorSchemeDark = Appearance.getColorScheme() === 'dark';
     BlueCurrentTheme.colors = isColorSchemeDark ? BlueDarkTheme.colors : BlueDefaultTheme.colors;

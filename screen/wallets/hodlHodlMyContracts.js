@@ -342,10 +342,10 @@ export default class HodlHodlMyContracts extends Component {
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: BlueCurrentTheme.colors.elevated,
+    backgroundColor: BtcpCurrentTheme.colors.elevated,
   },
   modalContent: {
-    backgroundColor: BlueCurrentTheme.colors.modal,
+    backgroundColor: BtcpCurrentTheme.colors.modal,
     padding: 22,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
@@ -357,7 +357,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   statusGreenWrapper: {
-    backgroundColor: BlueCurrentTheme.colors.feeLabel,
+    backgroundColor: BtcpCurrentTheme.colors.feeLabel,
     borderRadius: 20,
     height: 28,
     justifyContent: 'center',
@@ -368,10 +368,10 @@ const styles = StyleSheet.create({
   },
   statusGreenText: {
     fontSize: 12,
-    color: BlueCurrentTheme.colors.feeValue,
+    color: BtcpCurrentTheme.colors.feeValue,
   },
   statusGrayWrapper: {
-    backgroundColor: BlueCurrentTheme.colors.lightBorder,
+    backgroundColor: BtcpCurrentTheme.colors.lightBorder,
     borderRadius: 20,
     height: 28,
     justifyContent: 'center',
@@ -385,7 +385,7 @@ const styles = StyleSheet.create({
     color: '#9AA0AA',
   },
   statusGrayWrapper2: {
-    backgroundColor: BlueCurrentTheme.colors.inputBackgroundColor,
+    backgroundColor: BtcpCurrentTheme.colors.inputBackgroundColor,
     borderRadius: 5,
     minHeight: 28,
     maxHeight: 56,
@@ -401,23 +401,23 @@ const styles = StyleSheet.create({
   btcText: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: BlueCurrentTheme.colors.foregroundColor,
+    color: BtcpCurrentTheme.colors.foregroundColor,
   },
   subheaderText: {
     fontSize: 12,
     fontWeight: 'bold',
-    color: BlueCurrentTheme.colors.feeText,
+    color: BtcpCurrentTheme.colors.feeText,
   },
-  loading: { backgroundColor: BlueCurrentTheme.colors.elevated },
-  emptyComponentText: { textAlign: 'center', color: '#9AA0AA', paddingHorizontal: 16, backgroundColor: BlueCurrentTheme.colors.elevated },
+  loading: { backgroundColor: BtcpCurrentTheme.colors.elevated },
+  emptyComponentText: { textAlign: 'center', color: '#9AA0AA', paddingHorizontal: 16, backgroundColor: BtcpCurrentTheme.colors.elevated },
   itemSeparatorComponent: { height: 0.5, width: '100%', backgroundColor: '#C8C8C8' },
   flexDirectionRow: { flexDirection: 'row' },
   flexDirectionColumn: { flexDirection: 'column' },
-  volumeBreakdownText: { fontSize: 18, color: BlueCurrentTheme.colors.foregroundColor },
+  volumeBreakdownText: { fontSize: 18, color: BtcpCurrentTheme.colors.foregroundColor },
   contractStatusText: { fontSize: 13, color: 'gray', fontWeight: 'normal' },
   cancelContractText: { color: '#d0021b', fontSize: 15, paddingTop: 20, fontWeight: '500', textAlign: 'center' },
-  openChatText: { color: BlueCurrentTheme.colors.foregroundColor, fontSize: 15, paddingTop: 20, fontWeight: '500', textAlign: 'center' },
-  flatList: { paddingTop: 30, backgroundColor: BlueCurrentTheme.colors.elevated },
+  openChatText: { color: BtcpCurrentTheme.colors.foregroundColor, fontSize: 15, paddingTop: 20, fontWeight: '500', textAlign: 'center' },
+  flatList: { paddingTop: 30, backgroundColor: BtcpCurrentTheme.colors.elevated },
   roleText: { fontSize: 14, color: 'gray', padding: 5 },
   marginRight: {
     marginRight: 20,

@@ -26,7 +26,7 @@ import QuickActions from 'react-native-quick-actions';
 import OnAppLaunch from './class/on-app-launch';
 import DeeplinkSchemaMatch from './class/deeplink-schema-match';
 import loc from './loc';
-import { BlueDefaultTheme, BlueDarkTheme, BlueCurrentTheme } from './components/themes';
+import { BtcpDefaultTheme, BtcpDarkTheme, BtcpCurrentTheme } from './components/themes';
 import BottomModal from './components/BottomModal';
 import InitRoot from './Navigation';
 import BlueClipboard from './blue_modules/clipboard';

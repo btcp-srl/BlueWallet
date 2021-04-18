@@ -87,8 +87,8 @@ const iStyles = StyleSheet.create({
     elevation: 5,
   },
   image: {
-    width: 99,
-    height: 94,
+    width: 120,
+    height: 150,
     position: 'absolute',
     bottom: 0,
     right: 0,
@@ -178,7 +178,7 @@ const WalletCarouselItem = ({ item, index, onPress, handleLongPress, isSelectedW
         >
           <LinearGradient shadowColor={colors.shadowColor} colors={WalletGradient.gradientsFor(item.type)} style={iStyles.grad}>
             <Image
-              source={I18nManager.isRTL ? require('../img/btc-shape-rtl.png') : require('../img/btc-shape.png')}
+              source={I18nManager.isRTL ? require('../img/logo-shape-rtl.png') : require('../img/logo-shape.png')}
               style={iStyles.image}
             />
             <Text style={iStyles.br} />
@@ -208,7 +208,7 @@ const WalletCarouselItem = ({ item, index, onPress, handleLongPress, isSelectedW
       image = I18nManager.isRTL ? require('../img/vault-shape-rtl.png') : require('../img/vault-shape.png');
       break;
     default:
-      image = I18nManager.isRTL ? require('../img/btc-shape-rtl.png') : require('../img/btc-shape.png');
+      image = I18nManager.isRTL ? require('../img/logo-shape-rtl.png') : require('../img/logo-shape.png');
   }
 
   const latestTransactionText =

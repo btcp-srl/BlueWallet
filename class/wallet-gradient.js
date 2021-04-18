@@ -14,9 +14,9 @@ import { HDAezeedWallet } from "./wallets/hd-aezeed-wallet";
 import { useTheme } from '@react-navigation/native';
 
 export default class WalletGradient {
-  static hdSegwitP2SHWallet = ['#007AFF', '#0040FF'];
-  static hdSegwitBech32Wallet = ['#6CD9FC', '#44BEE5'];
-  static segwitBech32Wallet = ['#6CD9FC', '#44BEE5'];
+  static hdSegwitP2SHWallet = ['#33a79c', '#2c928a'];
+  static hdSegwitBech32Wallet = ['#33a79c', '#2c928a'];
+  static segwitBech32Wallet = ['#33a79c', '#2c928a'];
   static watchOnlyWallet = ['#474646', '#282828'];
   static legacyWallet = ['#37E8C0', '#15BE98'];
   static hdLegacyP2PKHWallet = ['#FD7478', '#E73B40'];

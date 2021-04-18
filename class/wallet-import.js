@@ -71,7 +71,7 @@ function WalletImport() {
 
   WalletImport.presentWalletAlreadyExistsAlert = () => {
     ReactNativeHapticFeedback.trigger('notificationError', { ignoreAndroidSystemSettings: false });
-    alert('This wallet has been previously imported.');
+    alert('Questo wallet è stato già importato precedentemente.');
   };
 
   WalletImport.addPlaceholderWallet = (importText, isFailure = false) => {
